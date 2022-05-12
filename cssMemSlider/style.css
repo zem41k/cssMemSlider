@@ -2,16 +2,88 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-  }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.slider {
+    width: 400%;
+    display: flex;
+    overflow: hidden;
+    
+}
+.slide {
+    width: 25%;
+    border: 2px solid black;
+    transition: .3s;
+}
 
-  
+.slide-img{
+    display: block;
+    margin: 0 auto;
+    height: 100%;
+}
+.slider-bottom-part {
+    display: flex;
+    justify-content: space-between;
+}
+.slide-title-container {
+    width: 400px;
+    overflow: hidden;
+}
+.slide-title-box{
+    display: flex;
+    width: 400%;
+}
+.slide-title {
+    width: 25%;
+    transition: .3s;
+}
+.navigation {
+    display: flex;
+    margin: 10px;
+}
+.bar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: aqua;
+    cursor: pointer;
+    margin: 10px;
+}
+
+input[name="mem"] {
+    visibility: hidden;
+}
+
+#mem1:checked ~ .slider .slide1 {
+    margin-left: 0%;
+}
+#mem2:checked ~ .slider .slide1  {
+    margin-left: -25%;
+}
+#mem3:checked ~ .slider .slide1  {
+    margin-left: -50%;
+}
+#mem4:checked ~ .slider .slide1  {
+    margin-left: -75%;
+}
+
+#mem1:checked ~ .slider-bottom-part .slide-title-container .slide-title-box .title1 {
+    margin-left: 0%;
+}
+#mem2:checked ~ .slider-bottom-part .slide-title-container .slide-title-box .title1 {
+    margin-left: -25%;
+}
+#mem3:checked ~ .slider-bottom-part .slide-title-container .slide-title-box .title1 {
+    margin-left: -50%;
+}
+#mem4:checked ~ .slider-bottom-part .slide-title-container .slide-title-box .title1 {
+    margin-left: -75%;
+}
