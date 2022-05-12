@@ -48,7 +48,7 @@ body {
     margin: 1rem;
 }
 .slide-title-container {
-    max-width: 30rem;
+    max-width: 100%;
     overflow: hidden;
 }
 .slide-title-box{
@@ -135,4 +135,13 @@ input[name="mem"] {
 #mem4:checked ~ .slider-bottom-part .navigation .bar .dot4 {
     background-color: rgb(255, 255, 92);
     border: none;
+}
+
+@media (max-width: 767.98px) {
+    .slider-bottom-part {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
 }
